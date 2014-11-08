@@ -129,17 +129,42 @@ to do this.
 
 ## Gory Algorithmic Details
 
-1. This problem is hard. Let's solve a simple problem:
+<!---
+1. This problem is hard. Let's solve a simple problem:<br>
      &#8627; Only schematize *x-monotone increasing* sub-paths.
 
-2. Input path is probably not *x-monotone increasing*.
+2. Input path is probably not *x-monotone increasing*.<br>
      &#8627; Split in monotone sub-path and mirror + rotate them to be x-monotone increasing
 
 3. Stitch them back together
+-->
 
-## Doing the real work
+Input path:
 
-* Schematize by deforming a rectangular grid
+<img src="images/path.svg" height="400px">
+
+## Simpilfy the problem
+
+Split the input path into monotone sub-paths and make them *x-monotone increasing*.
+
+<img src="images/path_split.svg" height="400px">
+
+## Schematize sub-path
+
+* Only certain angles are allowed for edges in a schematization. <br>
+&#8594; Use the one that is closed.
+
+* Restriction: only change the spacing of the columns and rows of the grid. <br>
+ (not always possible &#8594; find the best schematization)
+
+<img src="images/stripes_grid.svg" height="400px" style="float: left;">
+<img src="images/schematized_grid.svg" height="400px" style="float: right;">
+
+## Stitching all back together
+
+Connect the schematized sub-paths to build the complete path.
+
+<img src="images/schematized_reassemble.svg" height="400px">
 
 # Demo
 
