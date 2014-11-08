@@ -56,7 +56,7 @@ $endfor$
     <div class="slides">
 
 $if(title)$
-<section>
+<section data-background='images/sketch_paper_background.png'>
     <h1 class="title">$title$</h1>
 $if(subtitle)$
   <h1 class="subtitle">$subtitle$</h1>
@@ -90,6 +90,8 @@ $body$
         progress: true,
         history: true,
         center: true,
+        width: 1600,
+        height: 900,
         theme: $if(theme)$'$theme$'$else$Reveal.getQueryHash().theme$endif$, // available themes are in /css/theme
         transition: $if(transition)$'$transition$'$else$Reveal.getQueryHash().transition || 'default'$endif$, // default/cube/page/concave/zoom/linear/fade/none
 

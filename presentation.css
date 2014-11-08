@@ -1,5 +1,5 @@
 .reveal h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   text-shadow: 0px 0px 20px rgba(255, 255, 255, 1.0),
                0px 0px 20px rgba(255, 255, 255, 1.0),
                0px 0px 20px rgba(255, 255, 255, 1.0);
@@ -17,3 +17,54 @@
   border: solid 0 !important;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
 }
+
+.box-diagram {
+  list-style: none !important;
+  margin-top: 0.5em;
+}
+.box-diagram li {
+  float: right;
+  margin-right: 10px;
+}
+.box-diagram-box {
+  padding: 20px !important;
+}
+
+.bg-clr-blue {
+  background-color: #3887BE;
+}
+.bg-clr-purple {
+  background-color: #8A8ACB;
+}
+
+marker.clr-blue path {
+  fill: #3887BE;
+}
+marker.clr-blue circle {
+  stroke: #3887BE;
+  fill: none;
+}
+
+marker.clr-purple path {
+  fill: #8A8ACB;
+}
+marker.clr-purple circle {
+  stroke: #8A8ACB;
+  fill: none;
+}
+
+.diagram-arrow line {
+  stroke-width: 4px;
+}
+
+.diagram-arrow text {
+  text-anchor: middle;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 1.0),
+               0px 0px 5px rgba(255, 255, 255, 1.0),
+               0px 0px 5px rgba(255, 255, 255, 1.0);
+}
+
+line.clr-blue  { stroke: #3887BE; }
+text.clr-blue { fill: #3887BE; }
+line.clr-purple { stroke: #8A8ACB; }
+text.clr-purple { fill: #8A8ACB; }
