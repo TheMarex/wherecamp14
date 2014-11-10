@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Patrick Niklaus" />
+  <title>Routing Sketches</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="presentation.css"/>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section data-background='images/sketch_paper_background.png'>
+    <h1 class="title">Routing Sketches</h1>
+  <h1 class="subtitle">Learning from the Pre-Smartphone World</h1>
+    <h2 class="author">Patrick Niklaus</h2>
+    <h3 class="date">13. November 2014</h3>
+</section>
+
+<section><section id="who-am-i" class="titleslide slide level1"><h1>Who am I</h1></section><section id="patrick" class="slide level2">
+<h1>Patrick</h1>
+<ul>
+<li>Work for Mapbox, part of the Mapbox Directions team</li>
+<li>Computer Science Student: Karlsruhe Institute of Technology</li>
+</ul>
+</section></section>
+<section><section id="mapbox" class="titleslide slide level1" data-background="rgb(59, 178, 208)"><h1>Mapbox</h1></section><section id="mapbox-osrm" class="slide level2" data-background="images/osrm_background.png">
+<h1>Mapbox ♥ OSRM</h1>
+<ul>
+<li><p>Most people already know us for our beautiful mobile friendly maps</p></li>
+<li><p>Mapbox Directions: Expanding into routing</p></li>
+<li><p>Powered by the brilliant Open Source Routing Machine</p></li>
+</ul>
+</section></section>
+<section><section id="so-what-was-this-talk-about-again" class="titleslide slide level1"><h1>So, what was this talk about again?</h1></section><section id="in-the-olden-days" class="slide level2">
+<h1>In The Olden Days</h1>
+<p>How did you plan a route from <strong>A</strong> to <strong>B</strong>?</p>
+<p>↳ Look it up on a map* ↔ Ask someone</p>
+<p><small>(*) possibly made from dead trees.</small></p>
+</section><section id="your-memory-sucks" class="slide level2">
+<h1>Your memory sucks</h1>
+<div style="float:left;">
+<p><strong>Solutions:</strong></p>
+<ol type="1">
+<li><p>Write down a list of routing instructions</p></li>
+<li>Just draw a quick sketch.</li>
+</ol>
+</div>
+<p><img src="images/sketch_paper.png" style="float: right;" height="20%"></p>
+</section><section id="what-do-we-get-today" class="slide level2" data-background="images/apple_maps_background.png">
+<h1>What do we get today?</h1>
+<p>Take out Smartphone, <em>*swipe*</em>, <em>*type*</em> → Done.</p>
+</section><section id="perfect-right" class="slide level2">
+<h1>Perfect, right?</h1>
+<p>For interactive routing? Sure. But does the route preview really show you <strong>relavant</strong> information?</p>
+<iframe src="http://project-osrm.org/osrm-frontend-v2/?hl=en&amp;loc=52.463146,13.343553&amp;loc=52.502325,13.403149&amp;z=13&amp;center=52.490568,13.378601&amp;alt=0&amp;df=0&amp;re=0&amp;ly=763558683" width="800px" height="500px">
+</iframe>
+</section><section id="lets-have-a-look-at-the-old-sketch-again" class="slide level2">
+<h1>Let's have a look at the old sketch again</h1>
+<!--
+<div style="float: left;">
+* The route was abstracted: not the real geometry
+
+* Much more relevant information:
+  1. Turns are clearly visible
+  2. Road segments identifiable easily
+  3. Additional landmarks included
+  4. Shape of intersection
+</div>
+-->
+<div style="position: relative; left: 30%; top: 0px; margin-top: 10px; width: 600px; height: 723px;">
+<img src="images/sketch_paper.png" height="100%" style="position: absolute; left: 0; top: 0; z-index: 0; margin: 0;"> <svg style="position: absolute; left: 0; top: 0; z-index: 2; width: 100%; height: 100%;"> <defs> <marker id="markerArrowBlue" markerWidth="7" markerHeight="7" refx="1" refy="3.5" orient="auto" class="clr-blue"> <path d="M1,1 L1,6 L6,3.5 L1,1"/> </marker> <marker id="markerCircleBlue" markerWidth="14" markerHeight="14" refx="1px" refy="7px" orient="auto" class="clr-blue"> <circle cx="7" cy="7" r="6" style="stroke-width: 1px;"/> </marker> <marker id="markerArrowPurple" markerWidth="7" markerHeight="7" refx="1" refy="3.5" orient="auto" class="clr-purple"> <path d="M1,1 L1,6 L6,3.5 L1,1"/> </marker> <marker id="markerCirclePurple" markerWidth="14" markerHeight="14" refx="1px" refy="7px" orient="auto" class="clr-purple"> <circle cx="7" cy="7" r="6" style="stroke-width: 1px;"/> </marker> </defs> <g class="fragment diagram-arrow"> <line x1="370px" x2="275px" y1="430px" y2="380px" style="marker-end: url(#markerCircleBlue);" class="clr-blue"/> <text x="410px" y="470px" class="clr-blue">Turns clearly visible</text> </g> <g class="fragment diagram-arrow"> <line x1="370px" x2="94px" y1="600px" y2="535px" style="marker-end: url(#markerArrowBlue);" class="clr-blue"/> <text x="370px" y="640px" class="clr-blue">Road segments identifiable</text> </g> <g class="fragment diagram-arrow"> <line x1="160px" x2="240px" y1="100px" y2="195px" style="marker-end: url(#markerCirclePurple);" class="clr-purple"/> <text x="160px" y="80px" class="clr-purple">Landmarks</text> </g> <g class="fragment diagram-arrow"> <line x1="80px" x2="85px" y1="300px" y2="350px" class="clr-purple" style="marker-end: url(#markerCirclePurple);"/> <text x="120px" y="280px" class="clr-purple">Intersections</text> </g> </svg>
+</div>
+<ul class="fragment box-diagram" style="margin-top: -20px;">
+<li>
+<div class="box-diagram-box bg-clr-blue">
+Geometric Schematization
+</div>
+</li>
+<li>
+<div class="box-diagram-box bg-clr-purple">
+Context Information
+</div>
+</li>
+</ul>
+</section></section>
+<section><section id="geometry-schematization" class="titleslide slide level1"><h1>Geometry Schematization</h1></section><section id="previous-work" class="slide level2">
+<h1>Previous Work</h1>
+<ul>
+<li>In <em>Algorithmic Geometry</em> this building block is called <em>Path Schematization</em>:
+<ol type="1">
+<li>Limit angles of edge orientation to a fixed set</li>
+<li>Enforce minimum edge length</li>
+<li>Minimize overall path length</li>
+</ol></li>
+<li>Delling et al. formalized a complete theoretical framework and algorithms to do this.</li>
+<li>But the algorithms were too slow for our application, so we derived a fast approximation</li>
+</ul>
+</section><section id="gory-algorithmic-details" class="slide level2">
+<h1>Gory Algorithmic Details</h1>
+<!---
+1. This problem is hard. Let's solve a simple problem:<br>
+     &#8627; Only schematize *x-monotone increasing* sub-paths.
+
+2. Input path is probably not *x-monotone increasing*.<br>
+     &#8627; Split in monotone sub-path and mirror + rotate them to be x-monotone increasing
+
+3. Stitch them back together
+-->
+<p>Input path:</p>
+<p><img src="images/path.svg" height="400px"></p>
+</section><section id="simpilfy-the-problem" class="slide level2">
+<h1>Simpilfy the problem</h1>
+<p>Split the input path into monotone sub-paths and make them <em>x-monotone increasing</em>.</p>
+<p><img src="images/path_split.svg" height="400px"></p>
+</section><section id="schematize-sub-path" class="slide level2">
+<h1>Schematize sub-path</h1>
+<ul>
+<li><p>Only certain angles are allowed for edges in a schematization. <br> → Use the one that is closed.</p></li>
+<li><p>Restriction: only change the spacing of the columns and rows of the grid. <br> (not always possible → find the best schematization)</p></li>
+</ul>
+<p><img src="images/stripes_grid.svg" height="400px" style="float: left;"> <img src="images/schematized_grid.svg" height="400px" style="float: right;"></p>
+</section><section id="stitching-all-back-together" class="slide level2">
+<h1>Stitching all back together</h1>
+<p>Connect the schematized sub-paths to build the complete path.</p>
+<p><img src="images/schematized_reassemble.svg" height="400px"></p>
+</section></section>
+<section><section id="demo" class="titleslide slide level1"><h1>Demo</h1></section><section id="original-vs.-sketch" class="slide level2">
+<h1>Original vs. Sketch</h1>
+<p>
+<iframe src="http://54.69.126.202/frontend/main.html?hl=en&amp;loc=52.463146,13.343553&amp;loc=52.502325,13.403149&amp;z=12&amp;center=52.490568,13.378601&amp;alt=0&amp;df=0&amp;re=0&amp;ly=763558683" width="800px" height="500px">
+</iframe>
+</p>
+</section><section id="thanks" class="slide level2" data-background="#8A8ACB">
+<h1>Thanks!</h1>
+<p>C++ software developer? We are hiring! <br> <strong>mapbox.com/jobs</strong></p>
+</section></section>
+    </div>
+  </div>
+
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        width: 1600,
+        height: 900,
+        theme: 'simple', // available themes are in /css/theme
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+    </body>
+</html>
