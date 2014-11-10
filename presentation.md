@@ -171,7 +171,7 @@ Connect the schematized sub-paths to build the complete path.
 ## Original vs. Sketch
 
 <p>
-<iframe src="file:///home/patrick/Code/osrm-frontend/WebContent/main.html?hl=en&loc=52.463146,13.343553&loc=52.502325,13.403149&z=12&center=52.490568,13.378601&alt=0&df=0&re=0&ly=763558683" width="800px" height="500px">
+<iframe src="http://54.69.126.202/frontend/main.html?hl=en&loc=52.463146,13.343553&loc=52.502325,13.403149&z=12&center=52.490568,13.378601&alt=0&df=0&re=0&ly=763558683" width="800px" height="500px">
 </iframe>
 </p>
 
