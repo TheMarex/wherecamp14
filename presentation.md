@@ -175,3 +175,8 @@ Connect the schematized sub-paths to build the complete path.
 </iframe>
 </p>
 
+## Thanks! {data-background='#8A8ACB'}
+
+C++ software developer? We are hiring! <br>
+**mapbox.com/jobs**
+
