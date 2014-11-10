@@ -48,7 +48,7 @@ Take out Smartphone, *\*swipe\**, *\*type\** &#8594; Done.
 ## Perfect, right?
 
 For interactive routing? Sure.
-But does the route preview really show you **relavant** information?
+But does the route preview really show you **relevant** information?
 
 <iframe src="http://project-osrm.org/osrm-frontend-v2/?hl=en&loc=52.463146,13.343553&loc=52.502325,13.403149&z=13&center=52.490568,13.378601&alt=0&df=0&re=0&ly=763558683" width="800px" height="500px">
 </iframe>
@@ -143,7 +143,7 @@ Input path:
 
 <img src="images/path.svg" height="400px">
 
-## Simpilfy the problem
+## Simplify the problem
 
 Split the input path into monotone sub-paths and make them *x-monotone increasing*.
 
