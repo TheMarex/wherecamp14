@@ -1,4 +1,4 @@
-% Routing Sketches
+% Route Sketches
 % Patrick Niklaus
 % 13. November 2014
 
@@ -152,7 +152,7 @@ Split the input path into monotone sub-paths and make them *x-monotone increasin
 ## Schematize sub-path
 
 * Only certain angles are allowed for edges in a schematization. <br>
-&#8594; Use the one that is closed.
+&#8594; Use the one that is closest.
 
 * Restriction: only change the spacing of the columns and rows of the grid. <br>
  (not always possible &#8594; find the best schematization)
@@ -174,6 +174,9 @@ Connect the schematized sub-paths to build the complete path.
 <iframe src="file:///home/patrick/Code/osrm-frontend/WebContent/main.html?hl=en&loc=52.463146,13.343553&loc=52.502325,13.403149&z=12&center=52.490568,13.378601&alt=0&df=0&re=0&ly=763558683" width="800px" height="500px">
 </iframe>
 </p>
+
+All open source. <br>
+**github.com/Project-OSRM/osrm-backend** &#8594; **experimental/route-sketch**
 
 ## Thanks! {data-background='#8A8ACB'}
 
